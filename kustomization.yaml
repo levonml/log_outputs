@@ -1,20 +1,23 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - log_outputs/manifests/deployment.yaml
-  - log_outputs/manifests/service.yaml
-  - log_outputs/manifests/route.yaml
-  - log_outputs/manifests/gateway.yaml
-  - log_outputs/manifests/configmap.yaml
-  - log_outputs/PVs/persistentvolumeclaim-logoutput.yaml
-  - log_outputs/PVs/persistentvolume-logoutput.yaml
-  - pong-o/manifests/deployment.yaml
-  - pong-o/manifests/service.yaml
-  - pong-o/manifests/postgres-stset.yaml
+- log_outputs/manifests/deployment.yaml
+- log_outputs/manifests/service.yaml
+- log_outputs/manifests/route.yaml
+- log_outputs/manifests/gateway.yaml
+- log_outputs/manifests/configmap.yaml
+- log_outputs/PVs/persistentvolumeclaim-logoutput.yaml
+- log_outputs/PVs/persistentvolume-logoutput.yaml
+- pong-o/manifests/deployment.yaml
+- pong-o/manifests/service.yaml
+- pong-o/manifests/postgres-stset.yaml
 images:
-  - name: PROJECT/IMAGE-PINGPONG
-    newName: levonml/4-1-pong-o:latest
-  - name: PROJECT/IMAGE-WRITER
-    newName: levonml/1.11-writer:latest
-  - name: PROJECT/IMAGE-READER
-    newName: levonml/4-1-reader:latest
+- name: PROJECT/IMAGE-PINGPONG
+  newName: levonml/4-7-pong-o
+  newTag: 30756c3180d2b575d6a117655200cc99f47cb98c
+- name: PROJECT/IMAGE-READER
+  newName: levonml/4-7-reader
+  newTag: 30756c3180d2b575d6a117655200cc99f47cb98c
+- name: PROJECT/IMAGE-WRITER
+  newName: levonml/4-7-writer
+  newTag: 30756c3180d2b575d6a117655200cc99f47cb98c
