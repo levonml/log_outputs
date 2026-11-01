@@ -24,9 +24,9 @@ jobs:
         run: |-
           docker build --tag "levonml/4-7-pong-o:$GITHUB_SHA" ./pong-o
           docker push "levonml/4-7-pong-o:$GITHUB_SHA"
-          docker build --tag "levonml/4-7-reader:$GITHUB_SHA" ./log-outputs/string-reader
+          docker build --tag "levonml/4-7-reader:$GITHUB_SHA" ./log_outputs/string-reader
           docker push "levonml/4-7-reader:$GITHUB_SHA"
-          docker build --tag "levonml/4-7-writer:$GITHUB_SHA" ./log-outputs/string-writer
+          docker build --tag "levonml/4-7-writer:$GITHUB_SHA" ./log_outputs/string-writer
           docker push "levonml/4-7-writer:$GITHUB_SHA"
 
       - name: Set up Kustomize
