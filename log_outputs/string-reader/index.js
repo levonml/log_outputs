@@ -38,7 +38,7 @@ app.get('/showlogs', async (req, res) => {
         let pongCounter = await getPongs()
         // const pongCounter = fs.readFileSync(pongCounterFilePath, 'utf-8')
         console.log("currentStatus:", currentStatus)
-        res.send(`file content: ${information}<br>env variable: ${myMessage}<br>${currentStatus}.<br>Ping / Pongs: ${pongCounter}`)
+        res.send(`file content: ${information}<br>env variable: ${myMessage}<br>${currentStatus}.<br>Ping / Pongs: ${pongCounter}<br> Updates from argo CD`)
     } catch (error) {
         console.error('Error handling /showlogs request:')
         res.status(500).send('Internal Server Error')
