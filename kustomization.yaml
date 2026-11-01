@@ -14,10 +14,10 @@ resources:
 images:
 - name: PROJECT/IMAGE-PINGPONG
   newName: levonml/4-7-pong-o
-  newTag: 30756c3180d2b575d6a117655200cc99f47cb98c
+  newTag: 8b2dd95e07ebf110577e65ae9be036e5b1e78d29
 - name: PROJECT/IMAGE-READER
   newName: levonml/4-7-reader
-  newTag: 30756c3180d2b575d6a117655200cc99f47cb98c
+  newTag: 8b2dd95e07ebf110577e65ae9be036e5b1e78d29
 - name: PROJECT/IMAGE-WRITER
   newName: levonml/4-7-writer
-  newTag: 30756c3180d2b575d6a117655200cc99f47cb98c
+  newTag: 8b2dd95e07ebf110577e65ae9be036e5b1e78d29
